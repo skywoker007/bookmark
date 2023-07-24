@@ -4,15 +4,126 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project</title>
+  <title>Bookmark</title>
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="site-header__container container">
+      <a class="site-header__logo logo" href="index.html">
+        <img class="logo__img" src="img/logo.svg" alt="Bookmark logo" width="149" height="25">
+      </a>
+      <nav class="site-header__sitenav sitenav">
+        <ul class="sitenav__list">
+          <li class="sitenav__item"><a class="sitenav__link" href="#">Features</a></li>
+          <li class="sitenav__item"><a class="sitenav__link" href="#">Pricing</a></li>
+          <li class="sitenav__item"><a class="sitenav__link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="button button-site-header button__red" href="#">Login</a>
+    </div>
+  </header>
+  <!-- main-content -->
+  <main class="main-content">
+    <!-- hero -->
+    <div class="hero">
+      <div class="hero__container container">
+        <div class="hero__content">
+          <h1 class="hero__title">A Simple Bookmark Manager</h1>
+          <p class="hero__description">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+          <div class="hero__actions">
+            <a class="hero__actions-item button button__blue" href="#">Get it on Chrome</a>
+            <a class="hero__actions-item button button__grey" href="#">Get it on Firefox</a>
+          </div>
+        </div>
+        <img src="img/bg-header.svg" alt="Bookmark Manager Illustration" class="hero__img">
+      </div>
+    </div>
+    <!-- features -->
+    <section class="section">
+      <div class="container">
+        <div class="features__section-info section__info">
+          <h2 class="section__title">Features</h2>
+          <p class="section__description">Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+        </div>
+        <!-- tabs -->
+        <div class="tabs">
+          <ul class="tabs__list">
+            <li class="tabs__item tabs__item--active">
+              <a class="tabs__link" href="#simple-bookmarking">Simple Bookmarking</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#bookmark-search">Speedy Searching</a>
+            </li>
+            <li class="tabs__item">
+              <a class="tabs__link" href="#bookmark-share">Easy Sharing</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- tab-panels -->
+      <div class="tab__panels">
+        <div class="container">
+          <div class="tab__panel tab__panel-active" id="simple-bookmarking">
+            <section class="feature-tab-panel">
+              <img class="feature-tab-panel__img" src="img/simple-bookmarking-illustration.svg" alt="Bookmark interface illustration">
+              <div class="feature-tab-panel__info">
+                <h3 class="feature-tab-panel-title">Bookmark in one click</h3>
+                <p class="feature-tab-panel__text">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                <a class="button button__blue" href="inbox.html">More Info</a>
+              </div>
+            </section>
+          </div>
 
+          <div class="tab__panel" id="bookmark-search">
+            <section class="feature-tab-panel">
+              <img class="feature-tab-panel__img" src="img/intelligent-search-illustration.svg" alt="Bookmark search illustration">
+              <div class="feature-tab-panel__info">
+                <h3 class="feature-tab-panel-title">Intelligent search</h3>
+                <p class="feature-tab-panel__text">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+                <a class="button button__blue" href="inbox.html">More Info</a>
+              </div>
+            </section>
+          </div>
 
+          <div class="tab__panel" id="bookmark-share">
+            <section class="feature-tab-panel">
+              <img class="feature-tab-panel__img" src="img/shary-bookmark-illustration.svg" alt="Bookmark share illustration">
+              <div class="feature-tab-panel__info">
+                <h3 class="feature-tab-panel-title">Share your bookmarks</h3>
+                <p class="feature-tab-panel__text">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
+                <a class="button button__blue" href="inbox.html">More Info</a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      
+        
+      
+    </section>
+    <!-- download_extension -->
+    <section class="section">
+      <div class="container">
+        <div class="section__info">
+          <h2 class="section__title">Download the extension</h2>
+          <p class="section__description">We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
+        </div>
+      </div>
+    </section>
+    <!-- faq -->
+    <section class="section">
+      <div class="container">
+        <div class="section__info">
+          <h2 class="section__title">Frequently Asked Questions</h2>
+          <p class="section__description">Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.</p>
+        </div>
+      
+    </section>
+  </main>
 
   <script src="js/main.js"></script>
 </body>

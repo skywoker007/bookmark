@@ -1,3 +1,40 @@
+:root{
+  --blue:#5267df;
+  --red:#fa5959;
+  --text-color:#242a45;
+  --text-color-75: rgba(36, 42, 69, 0.75);
+  --text-color-50: rgba(36, 42, 69, 0.5);
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-MediumItalic.woff2") format("woff2"),
+      url("../fonts/Rubik-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Medium.woff2") format("woff2"),
+      url("../fonts/Rubik-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../fonts/Rubik-Regular.woff2") format("woff2"),
+      url("../fonts/Rubik-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -17,9 +54,11 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  overflow-x: hidden;
+  font-family: "Rubik", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 36px;
+  letter-spacing: 0.15px;
   background-color: #fff;
   color: #222;
 }
@@ -72,9 +111,9 @@ select:-webkit-autofill:focus {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1110px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -83,6 +122,282 @@ select:-webkit-autofill:focus {
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+}
+/* button */
+.button {
+  display: inline-block;
+  padding: 8px 22px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 2;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.button:active{
+  opacity: 0.6;
+}
+.button__red {
+  background-color: var(--red);
+  color: #fff;
+}
+.button__red:hover{
+  border-color: var(--red);
+  background-color: #fff;
+  color: var(--red);
+}
+.button__blue {
+  background-color: var(--blue);
+  color: #fff;
+}
+.button__blue:hover{
+  border-color: var(--blue);
+  background-color: #fff;
+  color: var(--blue);
+}
+.button__grey {
+  background-color: #f7f7f7;
+  color: var(--text-color);
+}
+.button__grey:hover{
+  border-color: #5b6074;
+  background-color: #fff;
+  color: var(--text-color);
+}
+.button--block{
+  display: block;
+  width: 100%;
+}
+.button-site-header{
+  padding: 10px 31px;
+  font-size: 13px;
+  line-height: 17px;
+  letter-spacing: 1.5px;
+}
+.logo {
+  display: block;
+  text-decoration: none;
+}
+.logo:hover{
+  opacity: 0.8;
+}
+.logo:active{
+  opacity: 0.6;
+}
+.logo__img {
+  display: block;
+  width: 149px;
+  height: 25px;
+  object-fit: contain;
+}
+.sitenav{
+  font-size: 13px;
+  line-height: 17px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.sitenav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sitenav__item:not(:last-child) {
+  margin-right: 48px;
+}
+.sitenav__link {
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.sitenav__link:hover{
+  color: var(--red);
+}
+.sitenav__link:active{
+  opacity: 0.6;
+}
+.section {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.section__info {
+  width: 100%;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+  text-align: center;
+}
+.section__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 52px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.section__description {
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--text-color-50);
+
+}
+/* feature tab panel */
+.feature-tab-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.feature-tab-panel__img {
+  margin-right: 30px;
+  object-fit: contain;
+}
+.feature-tab-panel__info {
+  max-width: 445px;
+}
+.feature-tab-panel-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 32px;
+  line-height: 52px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.feature-tab-panel__text {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 28px;
+}
+/* Site header */
+.site-header {
+  text-transform: uppercase;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.site-header__container {
+  display: flex;
+  align-items: center;
+}
+.site-header__logo {
+  margin-right: auto;
+
+}
+/* logo */
+
+.site-header__sitenav{  
+  margin-right: 48px;
+}
+/* hero */
+.hero {
+  padding-top: 66px;
+  padding-bottom: 105px;
+  background-image: url(../img/blue-pill.svg);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 705px) 200px;
+}
+.hero__container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero__content {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 540px;
+  padding-top: 66px;
+  margin-right: 65px;
+}
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.hero__description {
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 28px;
+}
+.hero__actions {
+  display: flex;
+}
+.hero__actions-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.hero__img {
+  width: 578px;
+  height: 385px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+/* features */
+.features__section-info{
+  margin-bottom: 44px;
+}
+/* tabs */
+.tabs__list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+.tabs__item {
+  width: 243px;
+  border-bottom: 1px solid rgba(73, 93, 207, 0.2);
+}
+.tabs__link {
+  display: block;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  border-bottom: 4px solid transparent;
+  font-size: 16px;
+  line-height: 17px;
+  color: var(--text-color-75);
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+.tabs__item--active .tabs__link{
+  color: var(--text-color);
+  border-color: var(--red);
+}
+.tabs__link:hover{
+  color: var(--red);
+}
+.tabs__link:active{
+  opacity: 0.6;
+}
+/* tab panels */
+.tab__panels {
+  padding-top: 75px;
+  padding-bottom: 165px;
+  background-image: url(../img/blue-pill.svg);
+  background-repeat: no-repeat;
+  background-position: calc(50% - 580px) 156px;
+}
+.tab__panel {
+  display: none;
+}
+.tab__panel-active{
+  display: block;
+}
+
+.button {
+}
+.button__blue {
 }
 
 @media
