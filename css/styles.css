@@ -381,24 +381,20 @@ select:-webkit-autofill:focus {
   opacity: 0.6;
 }
 /* tab panels */
-.tab__panels {
+.tabs__panels {
   padding-top: 75px;
   padding-bottom: 165px;
   background-image: url(../img/blue-pill.svg);
   background-repeat: no-repeat;
   background-position: calc(50% - 580px) 156px;
 }
-.tab__panel {
+.tabs__panel {
   display: none;
 }
-.tab__panel-active{
+.tabs__panel--active{
   display: block;
 }
 
-.button {
-}
-.button__blue {
-}
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
