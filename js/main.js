@@ -1,3 +1,9 @@
+const modifiers = {
+    tabItemActive: 'tabs__item--active',
+    tabPanelActive: 'tabpanels__item--active',
+    accordionItemOpen: 'accordion__item--open'
+};
+
 const elsTabsItem = document.querySelectorAll('.tabs__item');
 const elsTabsPanel = document.querySelectorAll('.tabpanels__item');
 const elsTabLink = document.querySelectorAll('.js-tab-link');
@@ -7,18 +13,18 @@ const elsAccordionItemToggler = document.querySelectorAll('.accordion__item-togg
 
 function deactivateTabItems(){
     elsTabsItem.forEach(function(elTabsItem){
-        elTabsItem.classList.remove('tabs__item--active');
+        elTabsItem.classList.remove(modifiers.tabItemActive);
     });
 }
 function deactivateTabPanels(){
     elsTabsPanel.forEach(function(elTabsPanel){
-        elTabsPanel.classList.remove('tabpanels__item--active');
+        elTabsPanel.classList.remove(modifiers.tabPanelActive);
     });
 }
 
 function closeAccordionItems () {
     elsAccordionItem.forEach(function (elAccordionItem) {
-        elAccordionItem.classList.remove('accordion__item--open');
+        elAccordionItem.classList.remove(modifiers.accordionItemOpen);
     });
 }
 elsTabLink.forEach(function(elTabLink){

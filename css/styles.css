@@ -577,7 +577,9 @@ select:-webkit-autofill:focus {
 .accordion__item-text {
   margin: 0;
 }
-
+.accordion__item-text:not(:last-child) {
+  margin-bottom: 20px;
+}
 
 /* SUBSCRIPTION */
 .subscription {
